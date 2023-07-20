@@ -5,16 +5,8 @@ import ImageMenu from './imageMenu.svelte';
 import Menu from '../sidebar/menu.svelte';
 import IconMenu from './iconMenu.svelte';
 import Notification from './notification.svelte';
-	function darkmode() {
-		const html = document.getElementsByTagName('html')[0];
-		if (html.classList.contains('dark')) html.classList.remove('dark');
-		else html.classList.add('dark');
-	}
+import ChangeThemeButton from './changeThemeButton.svelte'
 
-	function changeLanguage(x: Event & { currentTarget: EventTarget & HTMLSelectElement }) {
-		console.log(x.currentTarget.value);
-		setLanguage(x.currentTarget.value);
-	}
 </script>
 
 <header class="bg-sides dark:bg-sides-dark basis-12 flex">
@@ -40,6 +32,6 @@ import Notification from './notification.svelte';
 <Notification />
 <Notification />
 		</IconMenu>
-		<button on:click={darkmode} class="justify-self-end">dark</button>		
+		<ChangeThemeButton />		
 	</div>
 </header>
