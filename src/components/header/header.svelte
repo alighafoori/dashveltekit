@@ -1,6 +1,8 @@
 <script lang="ts">
-	import { langs, setLanguage, locales } from 'src/stores/i18n';
+	import { langs, setLanguage, locales,locale } from 'src/stores/i18n';
 import Hamburger from './hamburger.svelte';
+import ImageMenu from './imageMenu.svelte';
+import Menu from '../sidebar/menu.svelte';
 	function darkmode() {
 		const html = document.getElementsByTagName('html')[0];
 		if (html.classList.contains('dark')) html.classList.remove('dark');
@@ -13,13 +15,19 @@ import Hamburger from './hamburger.svelte';
 	}
 </script>
 
-<div class="bg-sides dark:bg-sides-dark basis-12 flex">
+<header class="bg-sides dark:bg-sides-dark basis-12 flex">
 	<div>
 		<Hamburger />
 		{$locales.header_header}
 	</div>
 	<div class="grow"></div>
 	<div>
+		<ImageMenu image={$locale.flag} alt="language">
+{#each langs as lang}
+<Menu text={lang.name} />
+{/each}
+		</ImageMenu>
+		
 		<button on:click={darkmode} class="justify-self-end">dark</button>
 		<select
 			on:change={(x) => {
@@ -31,4 +39,4 @@ import Hamburger from './hamburger.svelte';
 			{/each}
 		</select>
 	</div>
-</div>
+</header>
