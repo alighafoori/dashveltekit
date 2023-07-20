@@ -24,19 +24,12 @@ import Menu from '../sidebar/menu.svelte';
 	<div>
 		<ImageMenu image={$locale.flag} alt="language">
 {#each langs as lang}
-<Menu text={lang.name} />
+<Menu text={lang.name} href={null} on:click={()=>setLanguage(lang.code)}>
+	<img class="w-6 h-6 rounded-full" src={lang.flag} alt={lang.name}>
+</Menu>
 {/each}
 		</ImageMenu>
 		
-		<button on:click={darkmode} class="justify-self-end">dark</button>
-		<select
-			on:change={(x) => {
-				changeLanguage(x);
-			}}
-		>
-			{#each langs as lang}
-				<option value={lang.code}>{lang.name}</option>
-			{/each}
-		</select>
+		<button on:click={darkmode} class="justify-self-end">dark</button>		
 	</div>
 </header>
