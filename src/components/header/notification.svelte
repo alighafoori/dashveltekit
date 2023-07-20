@@ -10,7 +10,7 @@
         </div>
         <div class="flex items-center mt-2 rounded-lg px-1 py-1 cursor-pointer">
             <div class="relative flex flex-shrink-0 items-end">
-                <img class="h-16 w-16 rounded-full" src="https://i.pravatar.cc/300">    
+                <img class="h-16 w-16 rounded-full" src="https://i.pravatar.cc/300" alt="noti">    
                 <span class="absolute h-4 w-4 bg-green-400 rounded-full bottom-0 right-0 border-2 border-white"></span>
             </div>
             <div class="ltr:ml-3 rtl:mr-3">

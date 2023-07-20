@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export function clickOutside(node:any) {
+export function clickOutside(node: any) {
 	// the node has been mounted in the DOM
 
 	window.addEventListener('click', handleClick);
 
-	function handleClick(e:any) {
+	function handleClick(e: any) {
 		if (!node.contains(e.target)) {
 			node.dispatchEvent(new CustomEvent('outsideclick'));
 		}
