@@ -1,10 +1,11 @@
 <script lang="ts">
 	import Menu from './menu.svelte';
     import CollapsibleMenu from './collapsibleMenu.svelte';
+    import Category from './category.svelte';
 </script>
 
-<ul>
-	<Menu text="chat" href="/chat">
+<ul class="">
+	<Menu text="Home" href="/" notifications={3}>
 		<svg
 			class="mx-2"
 			xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +18,8 @@
 			/></svg
 		>
 	</Menu>
-    <CollapsibleMenu text="email">
+    <Category text="CRUD"/>
+    <CollapsibleMenu text="email" >
         <svg slot="icon"
 			class="mx-2"
 			xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +44,7 @@
                 /></svg
             >
         </Menu>
-        <Menu text="menu2" href="/chat">
+        <Menu text="menu2" href="/chat" badge="Pro">
             <svg
                 class="mx-2"
                 xmlns="http://www.w3.org/2000/svg"

@@ -10,6 +10,15 @@ export default defineConfig({
 		}
 	},
 	test: {
-		include: ['src/**/*.{test,spec}.{js,ts}']
+		include: ['src/**/*.{test,spec}.{js,ts}']		,
+		coverage: {
+			provider: 'v8'
+		},
+		alias: {
+			src: path.resolve(__dirname, './src')
+		},
+		deps: {
+			inline: [/vite-test-utils/]
+		}
 	}
 });

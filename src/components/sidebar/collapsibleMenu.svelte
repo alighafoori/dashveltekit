@@ -5,7 +5,7 @@
 
 <li class="px-2">
 	<a
-		class="flex pl-2 rtl:pr-2 "
+		class="dark:hover:text-[#FFFFFF] flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700"
 		on:click={() => {
 			show = !show;
 		}}
