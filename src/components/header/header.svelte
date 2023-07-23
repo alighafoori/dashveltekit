@@ -17,7 +17,7 @@
 	<div>
 		<ImageMenu image={$locale.flag} alt="language">
 			{#each langs as lang}
-				<Menu text={lang.name} href={null} on:click={() => setLanguage(lang.code)}>
+				<Menu text={lang.name} href={null} on:click={() => setLanguage(lang.code)} dir={lang.dir}>
 					<img class="w-6 h-6 rounded-full" src={lang.flag} alt={lang.name} />
 				</Menu>
 			{/each}

@@ -4,12 +4,14 @@
     import Footer from "src/components/footer/footer.svelte";
     import Main from "src/components/main/main.svelte";
 </script>
-
-<div class="flex h-screen rtt:flex-row-reverse">
-	<Sidebar />
-	<div class="bg-neutral-400 grow flex flex-col">
-		<Header />
-        <Main />
-        <Footer />
-	</div>
+<!--  -->
+<div class="flex flex-col h-screen">
+    <Header />
+    <div class="flex rtt:flex-row-reverse grow">
+        <Sidebar />
+        <div class="flex flex-col bg-neutral-400 grow">
+            <Main />
+            <Footer />
+        </div>
+    </div>
 </div>
