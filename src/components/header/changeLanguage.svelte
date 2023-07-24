@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { langs, setLanguage, locales, locale } from 'src/stores/i18n';
+	import { langs, setLanguage, locale } from 'src/stores/i18n';
 	import Menu from '../sidebar/menu.svelte';
 
 	import IconMenu from './iconMenu.svelte';
