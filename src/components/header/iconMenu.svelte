@@ -3,13 +3,13 @@
 	let show = false;
 </script>
 
-<div class="m-3 relative inline-block" use:clickOutside on:outsideclick={() => (show = false)}>
-	<button on:click={() => (show = !show)} class="w-10 h-10 rounded-xl border bg-gray-100 focus:bg-gray-100 active:bg-gray-200">
+<div use:clickOutside on:outsideclick={() => (show = false)}>
+	<button on:click={() => (show = !show)} class="w-10 h-10 bg-gray-100 border rounded-xl focus:bg-gray-100 active:bg-gray-200">
 		<slot name="icon" />
 	</button>
 	{#if show}
 		<div
-			class="absolute rtl:left-0 ltr:right-0 z-10 mt-2 w-80 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+			class="absolute z-10 mt-2 origin-top-right bg-white rounded-md shadow-lg rtl:left-0 ltr:right-0 w-80 ring-1 ring-black ring-opacity-5 focus:outline-none"
 			role="menu"
 			aria-orientation="vertical"
 			aria-labelledby="menu-button"
