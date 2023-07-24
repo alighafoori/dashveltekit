@@ -1,14 +1,16 @@
+import type { Action } from "svelte/types/runtime/action";
 /* eslint-disable @typescript-eslint/no-explicit-any */
-export function clickOutside(node: any) {
+export function clickOutside(node:HTMLElement): Action<HTMLElement, undefined> {
 	// the node has been mounted in the DOM
 
 	window.addEventListener('click', handleClick);
 
-	function handleClick(e: any) {
-		if (!node.contains(e.target)) {
+	function handleClick(this: Window, ev: MouseEvent) {	
+		if (!node.contains(ev.target as Node)) {
 			node.dispatchEvent(new CustomEvent('outsideclick'));
 		}
 	}
+	
 
 	return {
 		destroy() {
@@ -17,3 +19,4 @@ export function clickOutside(node: any) {
 		}
 	};
 }
+

@@ -5,7 +5,7 @@
 	let show = false;
 </script>
 
-<div use:clickOutside on:outsideclick={() => (show = false)}>
+<div use:clickOutside on:outsideclick={() => (show = false)} >
 	<a class="grid h-10 grid-flow-col gap-1 cursor-pointer" href={null} on:click={() => (show = !show)}>
 		<img src={$user.image} alt="" class="object-cover w-10 h-10 m-auto rounded-full" />
 		<span class="pt-2">{$user.name}</span>
