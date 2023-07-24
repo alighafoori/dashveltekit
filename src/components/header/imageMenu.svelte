@@ -5,7 +5,7 @@
 	let show = false;
 </script>
 
-<div class="m-3 relative inline-block" use:clickOutside on:outsideclick={() => (show = false)}>
+<div use:clickOutside on:outsideclick={() => (show = false)}>
 	<button
 		on:click={() => (show = !show)}
 		class="text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
@@ -16,7 +16,7 @@
 	</button>
 	{#if show}
 		<div
-			class="absolute rtl:left-0 ltr:right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+			class="absolute z-10 w-56 mt-2 origin-top-right bg-white rounded-md shadow-lg rtl:left-0 ltr:right-0 ring-1 ring-black ring-opacity-5 focus:outline-none"
 			role="menu"
 			aria-orientation="vertical"
 			aria-labelledby="menu-button"

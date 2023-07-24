@@ -7,10 +7,6 @@
 {#if $showSidebar}
 	<aside class="max-w-xs overflow-auto bg-sides dark:bg-sides-dark basis-1/4 max-sm:absolute max-sm:w-3/4 {$showSidebar ? '' : 'max-sm:hidden'}">
 		<div class="">
-			<div class="mt-8 mb-8 text-center">
-				<img src={$user.image} alt="" class="object-cover w-10 h-10 m-auto rounded-full lg:w-28 lg:h-28" />
-				<h5 class="hidden mt-4 text-xl font-semibold text-gray-600 lg:block">{$user.name}</h5>
-			</div>
 			<Menus />
 		</div>
 	</aside>
